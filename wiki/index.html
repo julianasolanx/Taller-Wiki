@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Wiki tecnica</h1>
+    <p>Proyecto (Grupo 3)</p>
+</header>
+
+<main>
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-button active" data-tab="proyecto">
+            Info Proyecto
+        </button>
+        <button class="tab-button" data-tab="miembros">
+            Miembros
+        </button>
+    </div>
+
+    <!-- Project Info Tab -->
+    <div id="proyecto" class="tab-content active">
+        <div class="section">
+            <h2>Project Information</h2>
+            <p><strong>Project Name:</strong> Example Project</p>
+            <p><strong>Description:</strong>  
+                This project demonstrates a basic technical wiki structure
+                built using HTML, CSS, and JavaScript.
+            </p>
+            <p><strong>Technologies Used:</strong></p>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript (Vanilla)</li>
+            </ul>
+            <p><strong>Version:</strong> 1.0.0</p>
+        </div>
+    </div>
+
+    <!-- Members Info Tab -->
+    <div id="miembros" class="tab-content">
+        <div class="section">
+            <h2>Miembros del grupo</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Email</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Member One</td>
+                            <td>Project Manager</td>
+                            <td>member1@email.com</td>
+                            <td>000001</td>
+                        </tr>
+                        <tr>
+                            <td>Member Two</td>
+                            <td>Backend Developer</td>
+                            <td>member2@email.com</td>
+                            <td>000002</td>
+                        </tr>
+                        <tr>
+                            <td>Member Three</td>
+                            <td>Frontend Developer</td>
+                            <td>member3@email.com</td>
+                            <td>000003</td>
+                        </tr>
+                        <tr>
+                            <td>Member Four</td>
+                            <td>Database Engineer</td>
+                            <td>member4@email.com</td>
+                            <td>000004</td>
+                        </tr>
+                        <tr>
+                            <td>Member Five</td>
+                            <td>QA Engineer</td>
+                            <td>member5@email.com</td>
+                            <td>000005</td>
+                        </tr>
+                        <tr>
+                            <td>Member Six</td>
+                            <td>DevOps</td>
+                            <td>member6@email.com</td>
+                            <td>000006</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
