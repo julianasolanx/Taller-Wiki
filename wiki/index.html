@@ -8,15 +8,17 @@
 <body>
 
 <header>
-    <h1>Wiki tecnica</h1>
-    <p>Proyecto (Grupo 3)</p>
+    <h1>DevSix Wiki</h1>
 </header>
 
 <main>
     <!-- Tabs -->
     <div class="tabs">
         <button class="tab-button active" data-tab="proyecto">
-            Info Proyecto
+            Wiki Proyecto
+        </button>
+        <button class="tab-button" data-tab="arquitectura">
+            Arquitectura
         </button>
         <button class="tab-button" data-tab="miembros">
             Miembros
@@ -26,19 +28,50 @@
     <!-- Project Info Tab -->
     <div id="proyecto" class="tab-content active">
         <div class="section">
-            <h2>Project Information</h2>
-            <p><strong>Project Name:</strong> Example Project</p>
-            <p><strong>Description:</strong>  
-                This project demonstrates a basic technical wiki structure
-                built using HTML, CSS, and JavaScript.
+            <h2>Proyecto Desarrollo Web</h2>
+            <p><strong>Nombre del Proyecto:</strong> Nombre del proyecto</p>
+            <p><strong>Descripcion:</strong>  
+                El proyecto consta de un visor y editor de procesos empresariales, cuyo objetivo es permitir la visualización y edición de procesos asociados a una empresa.
             </p>
-            <p><strong>Technologies Used:</strong></p>
+            <p><strong>Tecnologías usadas:</strong></p>
             <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript (Vanilla)</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
             </ul>
-            <p><strong>Version:</strong> 1.0.0</p>
+        </div>
+    </div>
+
+    <!-- Tab de Arquitectura -->
+    <div id="arquitectura" class="tab-content">
+        <div class="section">
+            <h2>Arquitectura del Proyecto</h2>
+            <p>Nuestro proyecto usa una arquitectura básica MVC <strong>Modelo-Vista-Controlador</strong> para mantener una separacion clara de responsabilidades. Esta arquitectura esta compuesta por:</p>
+            <ul>
+                <li><strong>Controladores:</strong> Responsables de atender solicitudes HTTP, preparar la información y enviarla a las vistas.</li>
+                <li><strong>Vistas (Thymeleaf):</strong> Encargadas del renderizado dinámico del contenido, sin incluir lógica de negocio compleja.</li>
+                <li><strong>Modelo:</strong> Datos que representan las páginas, secciones o entradas de la Wiki, ya sea simulados, en memoria o persistidos.</li>
+            </ul>
+            <div class="mvc-section">
+                <div class="mvc-box">
+                    <h3>Modelo</h3>
+                    <p>
+                        Se encarga de los datos, generalmente consultando la base de datos. Actualizaciones, consultas, búsquedas, etc.
+                    </p>
+                </div>
+                <div class="mvc-box">
+                    <h3>Vistas</h3>
+                    <p>
+                        Son la representación visual de los datos, todo lo que tenga que ver con la interfaz gráfica va aquí. Ni el modelo ni el controlador se preocupan de cómo se verán los datos, esa responsabilidad es únicamente de la vista.
+                    </p>
+                </div>
+                <div class="mvc-box">
+                    <h3>Controlador</h3>
+                    <p>
+                        Se encarga de controlar, recibe las órdenes del usuario y se encarga de solicitar los datos al modelo y de comunicárselos a la vista.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -46,54 +79,54 @@
     <div id="miembros" class="tab-content">
         <div class="section">
             <h2>Miembros del grupo</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Role</th>
-                            <th>Email</th>
-                            <th>ID</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Member One</td>
-                            <td>Project Manager</td>
-                            <td>member1@email.com</td>
-                            <td>000001</td>
-                        </tr>
-                        <tr>
-                            <td>Member Two</td>
-                            <td>Backend Developer</td>
-                            <td>member2@email.com</td>
-                            <td>000002</td>
-                        </tr>
-                        <tr>
-                            <td>Member Three</td>
-                            <td>Frontend Developer</td>
-                            <td>member3@email.com</td>
-                            <td>000003</td>
-                        </tr>
-                        <tr>
-                            <td>Member Four</td>
-                            <td>Database Engineer</td>
-                            <td>member4@email.com</td>
-                            <td>000004</td>
-                        </tr>
-                        <tr>
-                            <td>Member Five</td>
-                            <td>QA Engineer</td>
-                            <td>member5@email.com</td>
-                            <td>000005</td>
-                        </tr>
-                        <tr>
-                            <td>Member Six</td>
-                            <td>DevOps</td>
-                            <td>member6@email.com</td>
-                            <td>000006</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Email</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Member One</td>
+                        <td>Project Manager</td>
+                        <td>member1@email.com</td>
+                        <td>000001</td>
+                    </tr>
+                    <tr>
+                        <td>Member Two</td>
+                        <td>Backend Developer</td>
+                        <td>member2@email.com</td>
+                        <td>000002</td>
+                    </tr>
+                    <tr>
+                        <td>Member Three</td>
+                        <td>Frontend Developer</td>
+                        <td>member3@email.com</td>
+                        <td>000003</td>
+                    </tr>
+                    <tr>
+                        <td>Member Four</td>
+                        <td>Database Engineer</td>
+                        <td>member4@email.com</td>
+                        <td>000004</td>
+                    </tr>
+                    <tr>
+                        <td>Member Five</td>
+                        <td>QA Engineer</td>
+                        <td>member5@email.com</td>
+                        <td>000005</td>
+                    </tr>
+                    <tr>
+                        <td>Member Six</td>
+                        <td>DevOps</td>
+                        <td>member6@email.com</td>
+                        <td>000006</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </main>
