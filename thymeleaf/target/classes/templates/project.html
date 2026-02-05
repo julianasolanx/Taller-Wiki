@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Wiki</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+
+<main>
+    <h2>Proyecto Desarrollo Web</h2>
+    <p><strong>Nombre:</strong> <span th:text="${projectName}"></span></p>
+    <p><strong>Descripcion:</strong> <span th:text="${description}"></span></p>
+    <p><strong>Tecnologías usadas:</strong></p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Spring Boot + Thymeleaf project</li>
+    </ul>
+</main>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

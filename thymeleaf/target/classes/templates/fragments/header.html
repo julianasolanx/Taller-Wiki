@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header">
+
+    <h1>Dev6 Wiki</h1>
+
+    <nav class="tabs">
+        <button
+            class="tab-button"
+            th:classappend="${activeTab == 'project'} ? ' active' : ''"
+            th:onclick="|window.location='@{/project}'|">
+            Proyecto
+        </button>
+
+        <button
+            class="tab-button"
+            th:classappend="${activeTab == 'members'} ? ' active' : ''"
+            th:onclick="|window.location='@{/members}'|">
+            Miembros
+        </button>
+    </nav>
+
+</header>
+</body>
+</html>
