@@ -5,24 +5,26 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class WikiController {
 
     @GetMapping("/")
     public String home() {
-        return "redirect:/project";
+        return "redirect:/proyecto";
     }
 
-    @GetMapping("/project")
+    @GetMapping("/proyecto")
     public String project(Model model) {
         model.addAttribute("projectName", "(Nobre Generico de Proyecto)");
         model.addAttribute("description", "El proyecto consta de un visor y editor de procesos empresariales, cuyo objetivo es permitir la visualización y edición de procesos asociados a una empresa.");
         model.addAttribute("activeTab", "project");
-        return "project";
+        return "proyecto";
     }
 
-    @GetMapping("/members")
+    @GetMapping("/miembros")
     public String members(Model model) {
         model.addAttribute("activeTab", "members");
 
@@ -35,7 +37,14 @@ public class WikiController {
             new Member(6, "Daniel Cristancho", "DevOps", "email@email.com")
         ));
 
-        return "members";
+        return "miembros";
     }
+
+    @GetMapping("/arquitectura")
+    public String architecture(Model model) {
+
+        return "arquitectura";
+    }
+    
 }
 

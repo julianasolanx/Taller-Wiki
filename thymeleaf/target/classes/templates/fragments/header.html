@@ -8,16 +8,23 @@
     <nav class="tabs">
         <button
             class="tab-button"
-            th:classappend="${activeTab == 'project'} ? ' active' : ''"
-            th:onclick="|window.location='@{/project}'|">
+            th:classappend="${activeTab == 'proyecto'} ? ' active' : ''"
+            th:onclick="|window.location='@{/proyecto}'|">
             Proyecto
         </button>
 
         <button
             class="tab-button"
-            th:classappend="${activeTab == 'members'} ? ' active' : ''"
-            th:onclick="|window.location='@{/members}'|">
+            th:classappend="${activeTab == 'miembros'} ? ' active' : ''"
+            th:onclick="|window.location='@{/miembros}'|">
             Miembros
+        </button>
+
+        <button
+            class="tab-button"
+            th:classappend="${activeTab == 'arquitectura'} ? ' active' : ''"
+            th:onclick="|window.location='@{/arquitectura}'|">
+            Arquitectura
         </button>
     </nav>
 
