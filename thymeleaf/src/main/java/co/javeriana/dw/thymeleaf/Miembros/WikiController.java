@@ -45,6 +45,12 @@ public class WikiController {
 
         return "arquitectura";
     }
+
+    /*@GetMapping("/formulario")
+    public String form(Model model) {
+
+        return "formulario";
+    }*/
     
 }
 
