@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="header">
+
+    <h1>Dev6 Wiki</h1>
+
+    <nav class="tabs">
+        <button
+            class="tab-button"
+            th:classappend="${activeTab == 'proyecto'} ? ' active' : ''"
+            th:onclick="|window.location='@{/proyecto}'|">
+            Proyecto
+        </button>
+
+        <button
+            class="tab-button"
+            th:classappend="${activeTab == 'miembros'} ? ' active' : ''"
+            th:onclick="|window.location='@{/miembros}'|">
+            Miembros
+        </button>
+
+        <button
+            class="tab-button"
+            th:classappend="${activeTab == 'arquitectura'} ? ' active' : ''"
+            th:onclick="|window.location='@{/arquitectura}'|">
+            Arquitectura
+        </button>
+
+        <button
+            class="tab-button"
+            th:classappend="${activeTab == 'formulario'} ? ' active' : ''"
+            th:onclick="|window.location='@{/formulario}'|">
+            Formulario
+        </button>
+    </nav>
+
+</header>
+</body>
+</html>
