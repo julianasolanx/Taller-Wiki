@@ -26,6 +26,13 @@
             th:onclick="|window.location='@{/arquitectura}'|">
             Arquitectura
         </button>
+
+        <button
+            class="tab-button"
+            th:classappend="${activeTab == 'formulario'} ? ' active' : ''"
+            th:onclick="|window.location='@{/formulario}'|">
+            Formulario
+        </button>
     </nav>
 
 </header>
