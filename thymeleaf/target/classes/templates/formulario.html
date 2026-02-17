@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    
+    <title>Formulario</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script th:src="@{/js/script.js}" defer></script>
+    <script th:src="@{/js/form_script.js}" defer></script>
+
+    <link rel="stylesheet" th:href="@{/css/form.css}">
+</head>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<body>
+    <main>
+        <div class="section">
+            <!-- SOLO ESTE TÍTULO USA STYLES.CSS -->
+            <h1 class="title-styles">Formulario de Contacto</h1>
+            <div class="form-subtitle">Completa todos los campos para enviarnos tu mensaje</div>
+        </div>
+
+        <!-- Cuerpo del formulario -->
+        <div class="form-body">
+            <form th:action="@{/formulario}" th:object="${contact}" method="post" id="contactForm">
+
+
+                <!-- CONTENEDOR 1: Información personal -->
+                <div class="section-container">
+                    <div class="section-title">
+                        <div class="icon">👤</div>
+                        <span>Información personal</span>
+                    </div>
+
+                    <div class="fields-grid">
+                        <!-- Nombre completo -->
+                        <div class="field-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" th:field="*{nombre}" placeholder="Ej: Juan Pérez González">
+                            <div class="validation-box">
+                                <div class="error-message" id="nombreError">❌ Mínimo 3 caracteres requeridos</div>
+                                <div class="success-message" id="nombreSuccess">✓ Nombre válido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR 2: Datos de contacto -->
+                <div class="section-container">
+                    <div class="section-title">
+                        <div class="icon">📧</div>
+                        <span>Datos de contacto</span>
+                    </div>
+
+                    <div class="fields-grid">
+                        <!-- Correo electrónico -->
+                        <div class="field-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" th:field="*{email}" placeholder="ejemplo@correo.com">
+                            <div class="validation-box">
+                                <div class="error-message" id="emailError"> X Formato inválido (debe contener @ y .)
+                                </div>
+                                <div class="success-message" id="emailSuccess"> ✓ Email válido</div>
+                            </div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="field-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" th:field="*{telefono}" placeholder="Ej: 3008554625">
+                            <div class="validation-box">
+                                <div class="error-message" id="telefonoError"> X 7-15 dígitos numéricos</div>
+                                <div class="success-message" id="telefonoSuccess"> ✓ Teléfono válido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR 3: Motivo de contacto -->
+                <div class="section-container">
+                    <div class="section-title">
+                        <div class="icon">📋</div>
+                        <span>Motivo de contacto</span>
+                    </div>
+
+                    <div class="fields-grid">
+                        <!-- Asunto -->
+                        <div class="field-group">
+                            <label for="asunto">Asunto o motivo de contacto</label>
+                            <select id="asunto" th:field="*{asunto}">
+                                <option value="">Seleccione una opción</option>
+                                <option value="consulta">📝 Consulta general</option>
+                                <option value="soporte">🔧 Soporte técnico</option>
+                                <option value="ventas">💰 Ventas</option>
+                                <option value="reclamo">⚠️ Reclamo</option>
+                                <option value="sugerencia">💡 Sugerencia</option>
+                            </select>
+                            <div class="validation-box">
+                                <div class="error-message" id="asuntoError"> X Debes seleccionar una opción</div>
+                                <div class="success-message" id="asuntoSuccess"> ✓ Opción seleccionada</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR 4: Mensaje -->
+                <div class="section-container">
+                    <div class="section-title">
+                        <div class="icon">💬</div>
+                        <span>Mensaje</span>
+                    </div>
+
+                    <div class="fields-grid">
+                        <!-- Mensaje -->
+                        <div class="field-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje"
+                                    th:field="*{mensaje}"
+                                    placeholder="Escribe tu mensaje aquí... (mínimo 20)">
+                            </textarea>
+                            <div class="char-counter" id="charCounter">📝 Mínimo 20 caracteres</div>
+                            <div class="validation-box">
+                                <div class="error-message" id="mensajeError"> X El mensaje debe tener entre 20 y 400
+                                    caracteres</div>
+                                <div class="success-message" id="mensajeSuccess"> ✓ Mensaje válido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Línea divisoria antes del botón -->
+                <div class="section-divider"></div>
+
+                <!-- Botón de envío -->
+                <div class="button-container">
+                    <button type="submit" id="submitBtn" disabled>Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</html>
