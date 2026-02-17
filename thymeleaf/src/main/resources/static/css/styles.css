@@ -58,7 +58,7 @@ header h1 {
 /* =========================
 -------- Main Content -------- */
 main {
-    max-width: 900px;
+    max-width: 1700px;
     margin: 30px auto;
     background-color: #ffffff;
     padding: 25px;
@@ -80,6 +80,10 @@ p {
 
 strong {
     color: #111827;
+}
+
+ul {
+    padding-left:25px;
 }
 
 /* =========================
@@ -144,4 +148,41 @@ footer {
     header h1 {
         font-size: 22px;
     }
+}
+
+/* -------- Sections -------- */
+.section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+/* -------- mvc design -------- */
+.mvc-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.mvc-section     h2 {
+    margin-top: 0;
+}
+
+/*--- mvc-box ---*/
+.mvc-box {
+    background-color: #263d6f;
+    padding: 10px 30px;
+    border-radius: 6px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.mvc-box h2 {
+    margin-top: 0;
 }
