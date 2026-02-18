@@ -8,8 +8,8 @@ WORKDIR /app
 # Copy everything
 COPY . .
 
-# Make mvnw executable
-RUN chmod +x mvnw
+# Normalize line endings of mvnw (fix Windows CRLF -> LF) and make executable
+RUN sed -i 's/\r$//' mvnw && chmod +x mvnw
 
 EXPOSE 8080
 
