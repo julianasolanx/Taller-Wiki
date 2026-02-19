@@ -138,6 +138,41 @@
                 </div>
             </form>
         </div>
+
+        <div class="section" style="margin-top: 30px;">
+            <h2>Respuestas guardadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Telefono</th>
+                        <th>Asunto</th>
+                        <th>Mensaje</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="c : ${contacts}">
+                        <td th:text="${c.id}"></td>
+                        <td th:text="${c.nombre}"></td>
+                        <td th:text="${c.email}"></td>
+                        <td th:text="${c.telefono}"></td>
+                        <td th:text="${c.asunto}"></td>
+                        <td th:text="${c.mensaje}"></td>
+                        <td>
+                            <form th:action="@{/formulario/delete/{id}(id=${c.id})}" method="post">
+                                <button type="submit">Borrar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(contacts)}">
+                        <td colspan="7">No hay respuestas guardadas.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 </body>
 
